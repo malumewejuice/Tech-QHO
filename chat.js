@@ -7,23 +7,24 @@ export default async function handler(req, res) {
     const { message } = req.body;
 
     // Call OpenAI API
-    const response = await fetch("https://chat-bot-1zax.vercel.app/api/chat", {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini", // lightweight GPT-4 model
+        model: "gpt-4o-mini",
         messages: [{ role: "user", content: message }],
       }),
     });
 
     const data = await response.json();
-    const reply = data.choices?.[0]?.message?.content || "⚠️ No response.";
+    const reply = data.choices?.[0]?.message?.content || "⚠️ No response from AI.";
 
     res.status(200).json({ reply });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error: "Something went wrong." });
   }
 }
