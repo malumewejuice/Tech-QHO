@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Tech Q</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+   <!-- Navbar -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Tech Q</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+        <li class="relative group">
+          <a href="Services.html" class="hover:text-blue-300">Services ▾</a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+            <li><a href="Services.html" class="block px-4 py-2 hover:bg-gray-700">All Services</a></li>
+            <li><a href="AI Automation.html" class="block px-4 py-2 hover:bg-gray-700">AI Automation</a></li>
+            <li><a href="web dev.html" class="block px-4 py-2 hover:bg-gray-700">Web Development</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="hover:text-blue-300">Pricing</a></li>
+        <li><a href="Faq.html" class="hover:text-blue-300">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+      
+      </ul>
+      <button id="menu-toggle" class="md:hidden"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+
+  <main class="pt-24">
+
+    <!-- Hero Section -->
+    <section class="py-24 bg-gradient-to-r from-indigo-50 to-purple-50 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold text-indigo-700 mb-6">
+        Contact <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-indigo-600">Us</span>
+      </h1>
+      <p class="text-xl text-indigo-700/80 max-w-3xl mx-auto">
+        Ready to transform your business? Get in touch with our team of experts and let's discuss your next project.
+      </p>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-24 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12">
+
+          <!-- Contact Form -->
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-2">Request a Quote</h2>
+            <p class="text-gray-600 mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+            <form id="contactForm" class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium text-gray-700">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="John" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Doe" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="061 512 6221" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+              </div>
+
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                <input type="text" id="company" name="company" placeholder="Your Company" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+              </div>
+
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-700">Service Interested In</label>
+                <select id="service" name="service" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500">
+                  <option value="">Select a service</option>
+                  <option value="AI Automation">AI Automation</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Both Services">Both Services</option>
+                  <option value="Consultation">Consultation</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Project Details *</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+              </div>
+
+              <button type="submit" id="submitBtn" class="w-full py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow hover:opacity-90 flex items-center justify-center">
+                <i data-lucide="send" class="w-5 h-5 mr-2"></i> Send Message
+              </button>
+
+              <p class="text-xs text-gray-500 text-center mt-2">
+                * Required fields. We'll never share your information.
+              </p>
+            </form>
+
+            <div id="successMessage" class="hidden mt-6 text-center text-green-600 font-semibold">
+              Message sent successfully! We'll get back to you within 24 hours.
+            </div>
+
+            <div id="errorMessage" class="hidden mt-6 text-center text-red-600 font-semibold">
+              Failed to send message. Please try again.
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+              <h3 class="text-xl font-bold text-indigo-700 mb-4">Get in Touch</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center">
+                    <i data-lucide="mail" class="w-6 h-6 text-indigo-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-indigo-700">Email</h4>
+                    <p class="text-gray-600">Techqho@outlook.com</p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center">
+                    <i data-lucide="phone" class="w-6 h-6 text-indigo-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-indigo-700">Phone</h4>
+                    <p class="text-gray-600">061 512 6221</p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center">
+                    <i data-lucide="map-pin" class="w-6 h-6 text-indigo-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-indigo-700">Address</h4>
+                    <p class="text-gray-600">240 Apex Street<br>Johannesburg, 2091</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black  shadow-inner py-6 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Tech Q</h3>
+        <p class="mb-4">Transforming businesses with AI automation and web solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="Services.html" class="hover:text-white">Services</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="AI Automation.html" class="hover:text-white">AI Automation</a></li>
+          <li><a href="web dev.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="Services.html" class="hover:text-white">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> Techqho@outlook.com</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> 061 512 6221</li>
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center">
+      <p>© 2025 Tech Q. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    lucide.createIcons();
+
+    // Initialize EmailJS
+    emailjs.init('kP9Mrn4ObuxFS5ZPU'); // Replace with your EmailJS user ID
+
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="w-5 h-5 mr-2 animate-spin" data-lucide="loader"></i> Sending...';
+      lucide.createIcons();
+
+      emailjs.send('service_a022oln', 'template_12d5gkk', {
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        company: form.company.value,
+        service: form.service.value,
+        message: form.message.value
+      }).then(() => {
+        successMessage.classList.remove('hidden');
+        errorMessage.classList.add('hidden');
+        form.reset();
+      }).catch(() => {
+        errorMessage.classList.remove('hidden');
+        successMessage.classList.add('hidden');
+      }).finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i data-lucide="send" class="w-5 h-5 mr-2"></i> Send Message';
+        lucide.createIcons();
+      });
+    });
+  </script>
+
+</body>
+</html>

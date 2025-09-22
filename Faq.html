@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ with Chat - Tech Q</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+  </script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+ <!-- Navbar -->
+  <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Tech Q</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+        <li class="relative group">
+          <a href="Services.html" class="hover:text-blue-300">Services ▾</a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+            <li><a href="Services.html" class="block px-4 py-2 hover:bg-gray-700">All Services</a></li>
+            <li><a href="AI Automation.html" class="block px-4 py-2 hover:bg-gray-700">AI Automation</a></li>
+            <li><a href="web dev.html" class="block px-4 py-2 hover:bg-gray-700">Web Development</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="hover:text-blue-300">Pricing</a></li>
+        <li><a href="Faq.html" class="hover:text-blue-300">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+      
+      </ul>
+      <button id="menu-toggle" class="md:hidden"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+
+  <main class="pt-24">
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br bg-gray-900 py-16 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Find answers to common questions about our AI automation and web development services.
+      </p>
+      <div class="relative max-w-md mx-auto">
+        <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"></i>
+        <input type="text" id="faqSearch" placeholder="Search FAQs..." class="pl-10 w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+      </div>
+    </section>
+
+    <!-- Chat Help Banner -->
+    <section class="bg-gray-800 py-8">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <i data-lucide="message-circle" class="w-8 h-8 text-indigo-600"></i>
+            <div>
+              <h3 class="text-lg font-semibold">Can't find what you're looking for?</h3>
+              <p class="text-gray-500">Our AI support assistant is here to help with any questions.</p>
+            </div>
+          </div>
+          <button id="chatBtn" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">
+            Start Chat
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-gray-800 py-16">
+      <div class="max-w-4xl mx-auto px-6" id="faqContainer"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+ <footer class="bg-black  shadow-inner py-6 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Tech Q</h3>
+        <p class="mb-4">Transforming businesses with AI automation and web solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="Services.html" class="hover:text-white">Services</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="AI Automation.html" class="hover:text-white">AI Automation</a></li>
+          <li><a href="web dev.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="Services.html" class="hover:text-white">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+         <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> Techqho@outlook.com</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> 061 512 6221</li>
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center">
+      <p>© 2025 Tech Q. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chat Modal -->
+  <div id="chatModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-40 z-50">
+    <div class="bg-white rounded-xl shadow-lg w-96 p-6 relative">
+      <button id="closeChat" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <h3 class="text-xl font-bold mb-4">Ask a Question</h3>
+      <form id="chatForm" class="space-y-4">
+        <input type="text" name="user_name" placeholder="Your Name" required class="w-full border border-gray-300 rounded px-3 py-2"/>
+        <input type="email" name="user_email" placeholder="Your Email" required class="w-full border border-gray-300 rounded px-3 py-2"/>
+        <textarea name="message" placeholder="Your Question..." required class="w-full border border-gray-300 rounded px-3 py-2 h-24"></textarea>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700">
+          Send Message
+        </button>
+        <p id="chatStatus" class="text-sm text-center text-green-600 hidden">Message sent! We'll get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // FAQ Data
+    const faqs = [
+      { category: 'AI Automation', questions: [
+        { question: 'What is AI automation and how can it help my business?', answer: 'AI automation uses AI to streamline repetitive tasks, improve efficiency, and reduce human error.' },
+        { question: 'How long does it take to implement AI automation?', answer: 'Implementation varies; simple bots: 1-2 weeks, full systems: 4-8 weeks.' }
+      ]},
+      { category: 'Web Development', questions: [
+        { question: 'What technologies do you use?', answer: 'We use React, Next.js, TypeScript, Tailwind CSS, and custom backend solutions.' },
+        { question: 'Is maintenance included?', answer: 'Yes, we provide ongoing maintenance, updates, and performance optimization.' }
+      ]}
+    ];
+
+    const faqContainer = document.getElementById('faqContainer');
+    const searchInput = document.getElementById('faqSearch');
+
+    function renderFAQs(filter = '') {
+      faqContainer.innerHTML = '';
+      const filtered = faqs.map(cat => ({
+        ...cat,
+        questions: cat.questions.filter(q => q.question.toLowerCase().includes(filter.toLowerCase()) || q.answer.toLowerCase().includes(filter.toLowerCase()))
+      })).filter(cat => cat.questions.length > 0);
+
+      if(filtered.length === 0){
+        faqContainer.innerHTML = `<div class="bg-white p-8 rounded-lg shadow text-center text-gray-500">No FAQs found. Use chat for help!</div>`;
+        return;
+      }
+
+      filtered.forEach((cat) => {
+        const catDiv = document.createElement('div');
+        catDiv.classList.add('bg-white','rounded-lg','shadow-lg','mb-8','p-6');
+        catDiv.innerHTML = `<h3 class="text-2xl font-bold text-indigo-700 mb-4">${cat.category}</h3>`;
+        cat.questions.forEach((q) => {
+          const qDiv = document.createElement('div');
+          qDiv.classList.add('mb-2');
+          const qBtn = document.createElement('button');
+          qBtn.className = 'w-full text-left py-2 px-4 bg-indigo-50 rounded hover:bg-indigo-100 font-medium';
+          qBtn.textContent = q.question;
+          const ans = document.createElement('div');
+          ans.className = 'hidden mt-1 px-4 text-gray-700';
+          ans.textContent = q.answer;
+          qBtn.addEventListener('click', () => ans.classList.toggle('hidden'));
+          qDiv.appendChild(qBtn);
+          qDiv.appendChild(ans);
+          catDiv.appendChild(qDiv);
+        });
+        faqContainer.appendChild(catDiv);
+      });
+    }
+
+    searchInput.addEventListener('input', (e) => renderFAQs(e.target.value));
+    renderFAQs();
+
+    // Chat modal
+    const chatModal = document.getElementById('chatModal');
+    document.getElementById('chatBtn').addEventListener('click', () => chatModal.classList.remove('hidden'));
+    document.getElementById('chatBtn2').addEventListener('click', () => chatModal.classList.remove('hidden'));
+    document.getElementById('closeChat').addEventListener('click', () => chatModal.classList.add('hidden'));
+
+    // EmailJS chat form
+    const chatForm = document.getElementById('chatForm');
+    const chatStatus = document.getElementById('chatStatus');
+
+    chatForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      chatStatus.classList.add('hidden');
+
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(() => {
+        chatStatus.textContent = "Message sent! We'll get back to you soon.";
+        chatStatus.classList.remove('hidden');
+        chatForm.reset();
+      }, (error) => {
+        chatStatus.textContent = "Failed to send message. Please try again.";
+        chatStatus.classList.remove('hidden');
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>

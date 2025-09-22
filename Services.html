@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Tech Q | AI Automation Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <style>
+    .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; }
+    .feature-icon { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
+    /* Floating Chat */
+    #chat-bubble { position:fixed; bottom:20px; right:20px; background:#3b82f6; color:#fff; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; z-index:1000; }
+    #chat-window { position:fixed; bottom:90px; right:20px; width:320px; max-width:90%; background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); display:none; flex-direction:column; z-index:1000; }
+    #chat-window header { background:#3b82f6; color:#fff; padding:0.5rem 1rem; border-top-left-radius:12px; border-top-right-radius:12px; display:flex; justify-content:space-between; align-items:center; }
+    #chat-window form { padding:1rem; display:flex; flex-direction:column; gap:0.5rem; }
+    #chat-window input, #chat-window textarea { width:100%; padding:0.5rem; border-radius:6px; border:1px solid #ccc; }
+    #chat-window button { width:100%; background:#3b82f6; color:white; padding:0.75rem; border-radius:8px; font-weight:bold; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Navigation -->
+   <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Tech Q</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+        <li class="relative group">
+          <a href="Services.html" class="hover:text-blue-300">Services ▾</a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+            <li><a href="Services.html" class="block px-4 py-2 hover:bg-gray-700">All Services</a></li>
+            <li><a href="AI Automation.html" class="block px-4 py-2 hover:bg-gray-700">AI Automation</a></li>
+            <li><a href="web dev.html" class="block px-4 py-2 hover:bg-gray-700">Web Development</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="hover:text-blue-300">Pricing</a></li>
+        <li><a href="Faq.html" class="hover:text-blue-300">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+      
+      </ul>
+      <button id="menu-toggle" class="md:hidden"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-r from-blue-900 to-purple-900 text-center">
+    <h1 class="text-5xl font-bold mb-6" data-aos="fade-up">Our <span class="gradient-text">Services</span></h1>
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Cutting-edge AI and automation solutions designed to transform your business operations
+    </p>
+  </section>
+
+  <!-- Key Services -->
+  <section class="py-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+      <div class="service-card bg-gray-900 p-8 rounded-lg" data-aos="fade-up">
+        <div class="w-16 h-16 feature-icon rounded-lg flex items-center justify-center mb-6">
+          <i data-feather="code" class="text-white w-8 h-8"></i>
+        </div>
+        <a href="w" class="block bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
+        <h3 class="text-2xl font-bold mb-4">Website Development</h3>
+        <p class="text-gray-400 mb-6">Modern, high-performance websites and apps that convert visitors into customers.</p>
+        </a>
+      </div>
+      <div class="service-card bg-gray-900 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 feature-icon rounded-lg flex items-center justify-center mb-6">
+          <i data-feather="cpu" class="text-white w-8 h-8"></i>
+        </div>
+        <a href="AI Automation.html" class="block bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
+  <h3 class="text-2xl font-bold mb-2">AI Automation</h3>
+  <p class="text-gray-400">
+    Implement intelligent agents that learn, adapt, and automate business processes.
+  </p>
+</a>
+
+      </div>
+      <div class="service-card bg-gray-900 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 feature-icon rounded-lg flex items-center justify-center mb-6">
+          <i data-feather="refresh-cw" class="text-white w-8 h-8"></i>
+        </div>
+        <a href="AI Automation.html" class="block bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
+        <h3 class="text-2xl font-bold mb-4">Business Automation</h3>
+        <p class="text-gray-400 mb-6">Streamline operations with our intelligent workflow automation solutions.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us (from second code) -->
+  <section class="py-20 bg-gray-900 text-center">
+    <h2 class="text-3xl font-bold mb-12">Why Choose <span class="gradient-text">Tech Q?</span></h2>
+    <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <div>
+        <div class="w-16 h-16 mx-auto rounded-full bg-blue-600 flex items-center justify-center text-2xl">⚡</div>
+        <h3 class="mt-4 text-xl font-bold">Fast Delivery</h3>
+        <p class="text-gray-400">Quick turnaround times without compromising on quality.</p>
+      </div>
+      <div>
+        <div class="w-16 h-16 mx-auto rounded-full bg-blue-600 flex items-center justify-center text-2xl">📊</div>
+        <h3 class="mt-4 text-xl font-bold">Proven Results</h3>
+        <p class="text-gray-400">Track record of successful projects that drive measurable outcomes.</p>
+      </div>
+      <div>
+        <div class="w-16 h-16 mx-auto rounded-full bg-blue-600 flex items-center justify-center text-2xl">🌐</div>
+        <h3 class="mt-4 text-xl font-bold">Modern Technology</h3>
+        <p class="text-gray-400">Latest tools and frameworks to ensure scalable solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black  shadow-inner py-6 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Tech Q</h3>
+        <p class="mb-4">Transforming businesses with AI automation and web solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="Services.html" class="hover:text-white">Services</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="AI Automation.html" class="hover:text-white">AI Automation</a></li>
+          <li><a href="web dev.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="Services.html" class="hover:text-white">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> Techqho@outlook.com</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> 061 512 6221</li>
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center">
+      <p>© 2025 Tech Q. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Chat -->
+ 
+   
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+    feather.replace();
+
+    emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+
+    function toggleChat() {
+      const chat = document.getElementById('chat-window');
+      chat.style.display = chat.style.display === 'flex' ? 'none' : 'flex';
+    }
+    document.getElementById('chat-bubble').addEventListener('click', toggleChat);
+
+    document.getElementById('chat-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const formData = { name: form.name.value, email: form.email.value, message: form.message.value };
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+        .then(() => { alert('Message sent successfully!'); form.reset(); toggleChat(); })
+        .catch(error => { alert('Failed to send message.'); console.error(error); });
+    });
+  </script>
+
+</body>
+</html>

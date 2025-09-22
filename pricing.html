@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Tech Qho</title>
+   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body class="m-0 p-0 bg-[#001f3f] text-white">
+  <script>
+    AOS.init();
+    feather.replace();
+  </script>
+
+  <!-- Navbar -->
+    <nav class="sticky top-0 w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-20 items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Tech Q</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+        <li class="relative group">
+          <a href="Services.html" class="hover:text-blue-300">Services ▾</a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+            <li><a href="Services.html" class="block px-4 py-2 hover:bg-gray-700">All Services</a></li>
+            <li><a href="AI Automation.html" class="block px-4 py-2 hover:bg-gray-700">AI Automation</a></li>
+            <li><a href="web dev.html" class="block px-4 py-2 hover:bg-gray-700">Web Development</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="hover:text-blue-300">Pricing</a></li>
+        <li><a href="Faq.html" class="hover:text-blue-300">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+      
+      </ul>
+      <button id="menu-toggle" class="md:hidden"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-500 mb-4">Simple, Transparent Pricing</h1>
+      <p class="text-xl text-white max-w-3xl mx-auto">Choose the perfect plan to scale your AI automation and web development solutions.</p>
+      <div class="mt-8 flex justify-center space-x-4">
+        <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-medium">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Pricing Plans -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-200 mb-2">AI Agent Subscription Plans</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Automate your business processes with our powerful AI solutions</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Starter Plan -->
+      <div class="pricing-card bg-white rounded-xl p-8 relative" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
+        <p class="text-gray-600 mb-6">Perfect for small businesses exploring AI</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-gray-900">R499</span>
+          <span class="text-gray-600">/month</span>
+        </div>
+        <ul class="text-gray-800 space-y-3 mb-8 ">
+          <li class="feature-item">1 AI chatbot</li>
+          <li class="feature-item">Up to 250 conversations</li>
+          <li class="feature-item">Basic FAQs / lead capture</li>
+          <li class="feature-item">Monthly performance report</li>
+        </ul>
+        <button onclick="openChat('Starter AI Plan')" class="w-full py-3 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 transition font-medium">Get Started</button>
+      </div>
+      
+      <!-- Business Plan -->
+      <div class="pricing-card bg-white rounded-xl p-8 relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="popular-badge">Most Popular</div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Business</h3>
+        <p class="text-gray-600 mb-6">Automation for growing businesses</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-gray-900">R999</span>
+          <span class="text-gray-600">/month</span>
+        </div>
+        <ul class="text-gray-800 space-y-3 mb-8">
+          <li class="feature-item">2 AI agents</li>
+          <li class="feature-item">Up to 450 conversations</li>
+          <li class="feature-item">Workflow automation</li>
+          <li class="feature-item">Integration with Google Sheets, Calendly</li>
+        </ul>
+        <button onclick="openChat('Business AI Plan')" class="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-medium">Get Started</button>
+      </div>
+      
+      <!-- Pro Plan -->
+      <div class="pricing-card bg-white rounded-xl p-8 relative" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Pro</h3>
+        <p class="text-gray-600 mb-6">Enterprise-grade AI solution</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-gray-900">R4,999</span>
+          <span class="text-gray-600">/month</span>
+        </div>
+        <ul class="space-y-3 mb-8 text-gray-800 ">
+          <li class="feature-item">Unlimited conversations</li>
+          <li class="feature-item">3+ AI agents (chat, voice, WhatsApp)</li>
+          <li class="feature-item">GPT-4 support</li>
+          <li class="feature-item">Custom workflows & API integration</li>
+        </ul>
+        <button onclick="openChat('Pro AI Plan')" class="w-full py-3 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 transition font-medium">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Website Plans -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-200 mb-2">Website Subscription Plans</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Professional websites to establish your online presence</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Starter Site -->
+      <div class="pricing-card bg-white rounded-xl p-8 relative" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Starter Site</h3>
+        <p class="text-gray-600 mb-6">Essential online presence</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-gray-900">R299</span>
+          <span class="text-gray-600">/month</span>
+        </div>
+        <ul class="text-gray-800 space-y-3 mb-8">
+          <li class="feature-item">1–5 pages</li>
+          <li class="feature-item">Hosting included</li>
+          <li class="feature-item">1 content update/month</li>
+          <li class="feature-item">Basic SEO setup</li>
+        </ul>
+        <button onclick="openChat('Starter Site Plan')" class="w-full py-3 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 transition font-medium">Get Started</button>
+      </div>
+      
+      <!-- Business Site -->
+      <div class="pricing-card bg-white rounded-xl p-8 relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="popular-badge">Most Popular</div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Business Site</h3>
+        <p class="text-gray-600 mb-6">Professional features for growth</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-gray-900">R599</span>
+          <span class="text-gray-600">/month</span>
+        </div>
+        <ul class="text-gray-800 space-y-3 mb-8">
+          <li class="feature-item">Up to 10 pages</li>
+          <li class="feature-item">Mobile optimization</li>
+          <li class="feature-item">Monthly updates</li>
+          <li class="feature-item">Google Maps, WhatsApp chat</li>
+        </ul>
+        <button onclick="openChat('Business Site Plan')" class="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-medium">Get Started</button>
+      </div>
+      
+      <!-- E-Commerce -->
+      <div class="pricing-card bg-white rounded-xl p-8 relative" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">E-Commerce</h3>
+        <p class="text-gray-600 mb-6">Sell online with confidence</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-gray-900">R1,499</span>
+          <span class="text-gray-600">/month</span>
+        </div>
+        <ul class="text-gray-800 space-y-3 mb-8">
+          <li class="feature-item">Online store or booking system</li>
+          <li class="feature-item">Secure payments</li>
+          <li class="feature-item">2 updates/month</li>
+          <li class="feature-item">Advanced analytics & SEO</li>
+        </ul>
+        <button onclick="openChat('E-Commerce Plan')" class="w-full py-3 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 transition font-medium">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bundle Offer -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div class="pricing-card bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 relative" data-aos="fade-up">
+      <div class="popular-badge">Best Value</div>
+      <h3 class="text-2xl font-semibold text-white mb-2">AI + Website Combo</h3>
+      <p class="text-blue-100 mb-6">Complete digital package for your business</p>
+      <div class="mb-6">
+        <span class="text-4xl font-bold text-white">R1,499</span>
+        <span class="text-blue-200">/month</span>
+      </div>
+      <ul class="space-y-3 mb-8 text-blue-100">
+        <li class="feature-item">1 website (5 pages)</li>
+        <li class="feature-item">1 AI chatbot</li>
+        <li class="feature-item">WhatsApp integration</li>
+        <li class="feature-item">Monthly updates + performance report</li>
+      </ul>
+      <button onclick="openChat('AI + Website Combo Deal')" class="w-full py-3 bg-white text-blue-600 rounded-md hover:bg-gray-100 transition font-medium">Get Combo Deal</button>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-500 mb-2">Frequently Asked Questions</h2>
+      <p class="text-gray-600">Find answers to common questions about our pricing and services</p>
+    </div>
+    
+    <div class="space-y-4" data-aos="fade-up">
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-medium text-gray-900">What payment methods do you accept?</span>
+          <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 py-4 hidden">
+          <p class="text-gray-600">We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers for monthly subscriptions.</p>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-medium text-gray-900">Can I cancel my subscription anytime?</span>
+          <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 py-4 hidden">
+          <p class="text-gray-600">Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.</p>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-medium text-gray-900">Do you offer custom solutions?</span>
+          <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 py-4 hidden">
+          <p class="text-gray-600">Absolutely! If your needs aren't fully covered by our standard plans, we can create a custom package tailored to your specific requirements.</p>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
+          <span class="font-medium text-gray-900">How long does setup take?</span>
+          <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 py-4 hidden">
+          <p class="text-gray-600">For standard plans, setup typically takes 3-5 business days after we receive all required materials. Custom solutions may take longer depending on complexity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-500 rounded-xl mb-16" data-aos="fade-up">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to transform your business?</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">Get started with Tech Qho today and take your digital presence to the next level.</p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="contact.html" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition font-medium">Get Started Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black  shadow-inner py-6 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Tech Q</h3>
+        <p class="mb-4">Transforming businesses with AI automation and web solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="Services.html" class="hover:text-white">Services</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="AI Automation.html" class="hover:text-white">AI Automation</a></li>
+          <li><a href="web dev.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="Services.html" class="hover:text-white">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> Techqho@outlook.com</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> 061 512 6221</li>
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center">
+      <p>© 2025 Tech Q. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Chat -->
+  
+  
+  <div class="chat-window">
+    <div class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
+      <h3 class="font-medium">Chat with Tech Qho</h3>
+      <button onclick="toggleChat()" class="text-white hover:text-blue-100">
+        <i data-feather="x"></i>
+      </button>
+    </div>
+    <form class="p-6 space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+      </div>
+      <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-medium">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      // Add mobile menu toggle functionality here if needed
+      feather.replace();
+    });
+    
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        answer.classList.toggle('hidden');
+        icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        feather.replace();
+      });
+    });
+    
+    // Chat toggle
+    function toggleChat() {
+      const chatWindow = document.querySelector('.chat-window');
+      chatWindow.classList.toggle('active');
+      feather.replace();
+    }
+    
+    function openChat(planName) {
+      const chatWindow = document.querySelector('.chat-window');
+      const messageInput = document.getElementById('message');
+      
+      chatWindow.classList.add('active');
+      messageInput.value = `I'm interested in the ${planName}. Can you tell me more?`;
+      messageInput.focus();
+      feather.replace();
+    }
+    
+    // Initialize animations
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Refresh feather icons after animations
+    AOS.refresh();
+  </script>
+</body>
+</html>

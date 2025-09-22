@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Automation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+
+ <!-- Navbar -->
+   <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Tech Q</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+        <li class="relative group">
+          <a href="services.html" class="hover:text-blue-300">Services ▾</a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+            <li><a href="Services.html" class="block px-4 py-2 hover:bg-gray-700">All Services</a></li>
+            <li><a href="AI Automation.html" class="block px-4 py-2 hover:bg-gray-700">AI Automation</a></li>
+            <li><a href="web dev.html" class="block px-4 py-2 hover:bg-gray-700">Web Development</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="hover:text-blue-300">Pricing</a></li>
+        <li><a href="Faq.html" class="hover:text-blue-300">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+      
+      </ul>
+      <button id="menu-toggle" class="md:hidden"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+
+  <main class="pt-24">
+
+    <!-- Hero Section -->
+    <section class="py-24 bg-gradient-to-br from-indigo-50 to-purple-50 text-center">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="w-20 h-20 mx-auto mb-8 rounded-3xl bg-gradient-to-br from-purple-300 to-indigo-300 flex items-center justify-center">
+          <i data-lucide="bot" class="w-10 h-10 text-indigo-600"></i>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold text-indigo-700 mb-6">
+          AI <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-indigo-600">Automation</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12">
+          Transform your business operations with intelligent automation solutions that work 24/7, 
+          reduce costs, and eliminate repetitive tasks so your team can focus on what matters most.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="px-8 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow hover:opacity-90">
+            Get Started Today
+          </a>
+          <a href="/services" class="px-8 py-3 border border-indigo-500 rounded-lg hover:bg-indigo-50">
+            View Case Studies
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-6">
+          Why Choose AI Automation?
+        </h2>
+        <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+          In today's fast-paced business environment, manual processes are holding you back. 
+          Our AI automation solutions eliminate bottlenecks, reduce human error, and free up 
+          your valuable team members to focus on strategic initiatives that drive growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-6">
+            Key Features & Benefits
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our comprehensive AI automation solutions deliver measurable results across every aspect of your business.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Feature Card -->
+          <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-indigo-100 flex items-center justify-center">
+              <i data-lucide="workflow" class="w-6 h-6 text-indigo-600"></i>
+            </div>
+            <h3 class="font-semibold text-lg text-indigo-700 mb-2">Workflow Automation</h3>
+            <p class="text-sm text-gray-600">Streamline repetitive tasks and processes with intelligent automation.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-indigo-100 flex items-center justify-center">
+              <i data-lucide="bot" class="w-6 h-6 text-indigo-600"></i>
+            </div>
+            <h3 class="font-semibold text-lg text-indigo-700 mb-2">AI Chatbots & Assistants</h3>
+            <p class="text-sm text-gray-600">Smart customer service solutions that provide 24/7 support.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-indigo-100 flex items-center justify-center">
+              <i data-lucide="bar-chart-3" class="w-6 h-6 text-indigo-600"></i>
+            </div>
+            <h3 class="font-semibold text-lg text-indigo-700 mb-2">Predictive Analytics</h3>
+            <p class="text-sm text-gray-600">Leverage data-driven insights and forecasting to make informed decisions.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-indigo-100 flex items-center justify-center">
+              <i data-lucide="zap" class="w-6 h-6 text-indigo-600"></i>
+            </div>
+            <h3 class="font-semibold text-lg text-indigo-700 mb-2">Machine Learning Integration</h3>
+            <p class="text-sm text-gray-600">Custom ML solutions tailored to your specific business challenges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8 md:p-12">
+          <h3 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">
+            Ready to Automate Your Business?
+          </h3>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Let's discuss how AI automation can transform your operations, reduce costs, and accelerate growth.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contact" class="px-8 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow hover:opacity-90">
+              Schedule Consultation
+            </a>
+            <a href="/about" class="px-8 py-3 border border-indigo-500 rounded-lg hover:bg-indigo-50">
+              Learn More About Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black  shadow-inner py-6 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Tech Q</h3>
+        <p class="mb-4">Transforming businesses with AI automation and web solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="Services.html" class="hover:text-white">Services</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="AI Automation.html" class="hover:text-white">AI Automation</a></li>
+          <li><a href="web dev.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="Services.html" class="hover:text-white">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+         <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> Techqho@outlook.com</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> 061 512 6221</li>
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center">
+      <p>© 2025 Tech Q. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chat Support (placeholder) -->
+ 
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

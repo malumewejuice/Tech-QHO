@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Tech Q</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+ <!-- Navbar -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Tech Q</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+        <li class="relative group">
+          <a href="Services.html" class="hover:text-blue-300">Services ▾</a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+            <li><a href="Services.html" class="block px-4 py-2 hover:bg-gray-700">All Services</a></li>
+            <li><a href="AI Automation.html" class="block px-4 py-2 hover:bg-gray-700">AI Automation</a></li>
+            <li><a href="web dev.html" class="block px-4 py-2 hover:bg-gray-700">Web Development</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="hover:text-blue-300">Pricing</a></li>
+        <li><a href="Faq.html" class="hover:text-blue-300">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+      
+      </ul>
+      <button id="menu-toggle" class="md:hidden"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+  <main class="pt-24 flex-grow">
+
+    <!-- Hero Section -->
+    <section class="py-24 bg-gradient-to-r from-blue-600 to-purple-600 text-center text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          About <span class="bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">Tech Q</span>
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          We're a team of passionate technologists dedicated to transforming businesses 
+          through AI automation and innovative web development.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-24 bg-gray-800">
+      <div class="max-w-5xl mx-auto text-center px-6">
+        <h2 class="text-4xl font-bold text-indigo-700 mb-6">Our Story</h2>
+        <p class="text-lg text-white leading-relaxed">
+          Tech Q was founded with a vision to empower businesses with cutting-edge technology. 
+          From humble beginnings, we have grown into a dynamic team of innovators, engineers, and strategists 
+          passionate about helping organizations embrace the future of AI and automation. 
+          Our journey is fueled by creativity, collaboration, and a commitment to excellence.
+        </p>
+      </div>
+    </section>
+
+   <section class="py-16 bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Values Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold gradient-text">Our Core</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <div class="text-4xl mb-4">🎯</div>
+        <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+        <p class="text-gray-300">
+          To empower businesses with intelligent automation and cutting-edge web solutions that drive growth and efficiency.
+        </p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <div class="text-4xl mb-4">💡</div>
+        <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+        <p class="text-gray-300">
+          To be the leading AI automation and web development partner for businesses ready to embrace the future of technology.
+        </p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <div class="text-4xl mb-4">🏆</div>
+        <h3 class="text-xl font-semibold mb-2">Our Values</h3>
+        <p class="text-gray-300">
+          Innovation, integrity, and client success drive everything we do. We believe in transparent communication and delivering exceptional results.
+        </p>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="text-center mt-24 mb-16">
+      <h2 class="text-3xl font-bold gradient-text">Meet the Team</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-indigo-600 flex items-center justify-center text-xl font-bold mb-4">SN</div>
+        <h3 class="text-lg font-semibold">Sabelo Nkomonde</h3>
+        <p class="text-indigo-400">Marketing and Sales</p>
+        <p class="text-gray-400 mt-2">.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-green-600 flex items-center justify-center text-xl font-bold mb-4">MN</div>
+        <h3 class="text-lg font-semibold">Mawande Ntsodo</h3>
+        <p class="text-indigo-400">Web Developer</p>
+        <p class="text-gray-400 mt-2">.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-yellow-600 flex items-center justify-center text-xl font-bold mb-4">SM</div>
+        <h3 class="text-lg font-semibold">Shimiyeto Maswanganyi</h3>
+        <p class="text-indigo-400">Lead AI Engineer</p>
+        <p class="text-gray-400 mt-2">.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-pink-600 flex items-center justify-center text-xl font-bold mb-4">CM</div>
+        <h3 class="text-lg font-semibold">Cebo Maphanga</h3>
+        <p class="text-indigo-400">Software Engineer</p>
+        <p class="text-gray-400 mt-2">.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Careers -->
+    <section class="py-24 bg-gray-800" id="careers">
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <h2 class="text-4xl font-bold text-indigo-700 mb-6">Join Our Team</h2>
+        <p class="text-xl text-gray-600 mb-12">
+          We're always looking for talented individuals who share our passion for innovation.
+        </p>
+        <div class="p-8 bg-indigo-50 rounded-lg shadow">
+          <i data-lucide="users" class="w-12 h-12 mx-auto text-indigo-600 mb-4"></i>
+          <h3 class="text-2xl font-bold mb-4">We're Not Hiring at the Moment</h3>
+          <p class="text-gray-600 mb-6">Feel free to reach out and introduce yourself — we'd love to stay in touch for future opportunities.</p>
+          <a href="mailto:info@techq.com" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black  shadow-inner py-6 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Tech Q</h3>
+        <p class="mb-4">Transforming businesses with AI automation and web solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="Services.html" class="hover:text-white">Services</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="AI Automation.html" class="hover:text-white">AI Automation</a></li>
+          <li><a href="web dev.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="Services.html" class="hover:text-white">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> Techqho@outlook.com</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> 061 512 6221</li>
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center">
+      <p>© 2025 Tech Q. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbot-toggle" 
+          class="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700">
+    💬
+  </button>
+
+  <div id="chatbot-window" 
+       class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-lg border border-gray-200 flex flex-col overflow-hidden">
+    
+    <div class="bg-blue-600 text-white p-3 flex justify-between items-center">
+      <span class="font-bold">TechQ Chatbot</span>
+      <button id="chatbot-close" class="text-white font-bold">✖</button>
+    </div>
+
+    <div id="chatbot-messages" class="flex-1 p-3 overflow-y-auto text-sm space-y-2">
+      <div class="bg-gray-200 p-2 rounded-lg w-fit max-w-[80%]">
+        👋 Hi! I’m your assistant. Ask me about Websites or AI Agents.
+      </div>
+    </div>
+
+    <div class="p-3 border-t flex">
+      <input id="chatbot-input" 
+             type="text" 
+             placeholder="Type a message..." 
+             class="flex-1 border rounded-lg px-2 py-1 text-sm focus:outline-none text-black">
+      <button id="chatbot-send" 
+              class="ml-2 bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 text-sm">
+        Send
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("chatbot-toggle");
+    const chatWindow = document.getElementById("chatbot-window");
+    const closeBtn = document.getElementById("chatbot-close");
+    const sendBtn = document.getElementById("chatbot-send");
+    const inputField = document.getElementById("chatbot-input");
+    const messagesDiv = document.getElementById("chatbot-messages");
+
+    toggleBtn.addEventListener("click", () => chatWindow.classList.toggle("hidden"));
+    closeBtn.addEventListener("click", () => chatWindow.classList.add("hidden"));
+
+    sendBtn.addEventListener("click", sendMessage);
+    inputField.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    async function sendMessage() {
+      const msg = inputField.value.trim();
+      if (!msg) return;
+
+      addMessage(msg, "user");
+      inputField.value = "";
+
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: msg }),
+        });
+
+        const data = await response.json();
+        addMessage(data.reply, "bot");
+      } catch (error) {
+        addMessage("⚠️ Error: Could not reach AI server.", "bot");
+      }
+    }
+
+    function addMessage(text, sender) {
+      const bubble = document.createElement("div");
+      bubble.className = `p-2 rounded-lg max-w-[80%] ${
+        sender === "user"
+          ? "bg-blue-600 text-white self-end ml-auto"
+          : "bg-gray-200 text-black"
+      }`;
+      bubble.textContent = text;
+      messagesDiv.appendChild(bubble);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+  </script>
+
+</body>
+</html>

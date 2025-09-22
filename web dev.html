@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development - Tech Q</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <style>
+    .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; }
+    .feature-icon { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
+    /* Floating Chat */
+    #chat-bubble { position:fixed; bottom:20px; right:20px; background:#3b82f6; color:#fff; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; z-index:1000; }
+    #chat-window { position:fixed; bottom:90px; right:20px; width:320px; max-width:90%; background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); display:none; flex-direction:column; z-index:1000; }
+    #chat-window header { background:#3b82f6; color:#fff; padding:0.5rem 1rem; border-top-left-radius:12px; border-top-right-radius:12px; display:flex; justify-content:space-between; align-items:center; }
+    #chat-window form { padding:1rem; display:flex; flex-direction:column; gap:0.5rem; }
+    #chat-window input, #chat-window textarea { width:100%; padding:0.5rem; border-radius:6px; border:1px solid #ccc; }
+    #chat-window button { width:100%; background:#3b82f6; color:white; padding:0.75rem; border-radius:8px; font-weight:bold; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Tech Q</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-gray-300 hover:text-blue-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+        <li class="relative group">
+          <a href="Services.html" class="hover:text-blue-300">Services ▾</a>
+          <ul class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+            <li><a href="Services.html" class="block px-4 py-2 hover:bg-gray-700">All Services</a></li>
+            <li><a href="AI Automation.html" class="block px-4 py-2 hover:bg-gray-700">AI Automation</a></li>
+            <li><a href="web-dev.html" class="block px-4 py-2 hover:bg-gray-700 text-blue-400">Web Development</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="hover:text-blue-300">Pricing</a></li>
+        <li><a href="Faq.html" class="hover:text-blue-300">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+      </ul>
+      <button id="menu-toggle" class="md:hidden text-gray-300"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-gradient-to-r from-blue-900 to-purple-900 text-center">
+    <div class="icon-circle mx-auto mb-6 text-5xl">💻</div>
+    <h1 class="text-5xl font-bold mb-6" data-aos="fade-up">Web <span class="gradient-text">Development</span></h1>
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Create stunning, high-performance websites and web applications that captivate your audience and drive business growth.
+    </p>
+    <div class="mt-6 flex justify-center gap-4 flex-wrap">
+      <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md" onclick="toggleChat()">Start Your Project</button>
+     
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="py-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+      <div class="service-card bg-gray-900 p-8 rounded-lg" data-aos="fade-up">
+        <div class="w-16 h-16 feature-icon rounded-lg flex items-center justify-center mb-6"><i data-feather="globe" class="text-white w-8 h-8"></i></div>
+        <h3 class="text-2xl font-bold mb-4">Custom Web Apps</h3>
+        <p class="text-gray-400">Tailored solutions built with React, Next.js, and Node.js to match your exact business needs.</p>
+      </div>
+      <div class="service-card bg-gray-900 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 feature-icon rounded-lg flex items-center justify-center mb-6"><i data-feather="shopping-cart" class="text-white w-8 h-8"></i></div>
+        <h3 class="text-2xl font-bold mb-4">E-commerce Solutions</h3>
+        <p class="text-gray-400">Scalable online stores with secure payments, inventory, and SEO optimization.</p>
+      </div>
+      <div class="service-card bg-gray-900 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 feature-icon rounded-lg flex items-center justify-center mb-6"><i data-feather="layers" class="text-white w-8 h-8"></i></div>
+        <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+        <p class="text-gray-400">Beautiful, responsive interfaces crafted to engage users and drive conversions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies -->
+  <section class="py-20 bg-gray-900 text-center">
+    <h2 class="text-3xl font-bold mb-12">Technologies We Use</h2>
+    <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-4 rounded-lg">React & Next.js</div>
+      <div class="bg-gray-800 p-4 rounded-lg">TypeScript</div>
+      <div class="bg-gray-800 p-4 rounded-lg">Tailwind CSS</div>
+      <div class="bg-gray-800 p-4 rounded-lg">Node.js</div>
+      <div class="bg-gray-800 p-4 rounded-lg">MongoDB</div>
+      <div class="bg-gray-800 p-4 rounded-lg">PostgreSQL</div>
+      <div class="bg-gray-800 p-4 rounded-lg">AWS & Vercel</div>
+      <div class="bg-gray-800 p-4 rounded-lg">REST & GraphQL APIs</div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-20 bg-gray-800 text-center">
+    <h2 class="text-3xl font-bold mb-12">Our Development Process</h2>
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="service-card bg-gray-900 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">01. Discovery</h3>
+        <p class="text-gray-400">We understand your goals, requirements, and target audience.</p>
+      </div>
+      <div class="service-card bg-gray-900 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">02. Design</h3>
+        <p class="text-gray-400">Wireframes & designs that align with your brand vision.</p>
+      </div>
+      <div class="service-card bg-gray-900 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">03. Development</h3>
+        <p class="text-gray-400">Build your site with modern technologies & best practices.</p>
+      </div>
+      <div class="service-card bg-gray-900 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">04. Launch</h3>
+        <p class="text-gray-400">Deploy, test, and optimize for peak performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black  shadow-inner py-6 text-center text-gray-500">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Tech Q</h3>
+        <p class="mb-4">Transforming businesses with AI automation and web solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="Services.html" class="hover:text-white">Services</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="AI Automation.html" class="hover:text-white">AI Automation</a></li>
+          <li><a href="web dev.html" class="hover:text-white">Web Development</a></li>
+          <li><a href="Services.html" class="hover:text-white">All Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2">
+         <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> Techqho@outlook.com</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> 061 512 6221</li>
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-8 pt-8 text-center">
+      <p>© 2025 Tech Q. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Chat -->
+  
+  <script>
+    AOS.init({ duration: 800, once: true });
+    feather.replace();
+    emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+
+    function toggleChat() {
+      const chat = document.getElementById('chat-window');
+      chat.style.display = chat.style.display === 'flex' ? 'none' : 'flex';
+    }
+    document.getElementById('chat-bubble').addEventListener('click', toggleChat);
+
+    document.getElementById('chat-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const formData = { name: form.name.value, email: form.email.value, message: form.message.value };
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+        .then(() => { alert('Message sent successfully!'); form.reset(); toggleChat(); })
+        .catch(error => { alert('Failed to send message.'); console.error(error); });
+    });
+  </script>
+</body>
+</html>
