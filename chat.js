@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     const { message } = req.body;
 
     // Call OpenAI API
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("https://chat-bot-1zax.vercel.app/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
