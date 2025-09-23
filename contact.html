@@ -58,59 +58,59 @@
           <div class="bg-white rounded-2xl shadow-lg p-8">
             <h2 class="text-2xl font-bold text-indigo-700 mb-2">Request a Quote</h2>
             <p class="text-gray-600 mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
-
             <form id="contactForm" class="space-y-4">
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <label for="firstName" class="block text-sm font-medium text-gray-700">First Name *</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="John" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
-                </div>
-                <div>
-                  <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name *</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Doe" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
-                </div>
-              </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <label for="firstName" class="block text-sm font-medium text-gray-700">First Name *</label>
+      <input type="text" id="firstName" name="first_name" placeholder="John" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+    </div>
+    <div>
+      <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name *</label>
+      <input type="text" id="lastName" name="last_name" placeholder="Doe" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+    </div>
+  </div>
 
-              <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
-                <input type="email" id="email" name="email" placeholder="john@company.com" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
-              </div>
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
+    <input type="email" id="email" name="email" placeholder="john@company.com" required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+  </div>
 
-              <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="061 512 6221" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
-              </div>
+  <div>
+    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="061 512 6221" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+  </div>
 
-              <div>
-                <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
-                <input type="text" id="company" name="company" placeholder="Your Company" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
-              </div>
+  <div>
+    <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+    <input type="text" id="company" name="company" placeholder="Your Company" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"/>
+  </div>
 
-              <div>
-                <label for="service" class="block text-sm font-medium text-gray-700">Service Interested In</label>
-                <select id="service" name="service" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500">
-                  <option value="">Select a service</option>
-                  <option value="AI Automation">AI Automation</option>
-                  <option value="Web Development">Web Development</option>
-                  <option value="Both Services">Both Services</option>
-                  <option value="Consultation">Consultation</option>
-                </select>
-              </div>
+  <div>
+    <label for="service" class="block text-sm font-medium text-gray-700">Service Interested In</label>
+    <select id="service" name="service" class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500">
+      <option value="">Select a service</option>
+      <option value="AI Automation">AI Automation</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Both Services">Both Services</option>
+      <option value="Consultation">Consultation</option>
+    </select>
+  </div>
 
-              <div>
-                <label for="message" class="block text-sm font-medium text-gray-700">Project Details *</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-              </div>
+  <div>
+    <label for="message" class="block text-sm font-medium text-gray-700">Project Details *</label>
+    <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required class="mt-1 block w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+  </div>
 
-              <button type="submit" id="submitBtn" class="w-full py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow hover:opacity-90 flex items-center justify-center">
-                <i data-lucide="send" class="w-5 h-5 mr-2"></i> Send Message
-              </button>
+  <button type="submit" id="submitBtn" class="w-full py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow hover:opacity-90 flex items-center justify-center">
+    <i data-lucide="send" class="w-5 h-5 mr-2"></i> Send Message
+  </button>
 
-              <p class="text-xs text-gray-500 text-center mt-2">
-                * Required fields. We'll never share your information.
-              </p>
-            </form>
+  <p class="text-xs text-gray-500 text-center mt-2">
+    * Required fields. We'll never share your information.
+  </p>
+</form>
 
+            
             <div id="successMessage" class="hidden mt-6 text-center text-green-600 font-semibold">
               Message sent successfully! We'll get back to you within 24 hours.
             </div>
@@ -247,3 +247,4 @@
 
 </body>
 </html>
+
