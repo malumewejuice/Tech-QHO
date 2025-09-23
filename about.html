@@ -190,86 +190,32 @@
   </footer>
 
   <!-- Chatbot -->
-  <button id="chatbot-toggle" 
-          class="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700">
-    💬
-  </button>
+ <!-- Your bubble button -->
+<button id="chatbot-toggle" 
+        class="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700">
+  💬
+</button>
 
-  <div id="chatbot-window" 
-       class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-lg border border-gray-200 flex flex-col overflow-hidden">
-    
-    <div class="bg-blue-600 text-white p-3 flex justify-between items-center">
-      <span class="font-bold">TechQ Chatbot</span>
-      <button id="chatbot-close" class="text-white font-bold">✖</button>
-    </div>
+<!-- Crisp embed (hidden by default) -->
+<script type="text/javascript">
+  window.$crisp=[];
+  window.CRISP_WEBSITE_ID="YOUR_CRISP_ID"; // Replace with your Crisp ID
+  (function(){
+    d=document;s=d.createElement("script");
+    s.src="https://client.crisp.chat/l.js";
+    s.async=1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+</script>
 
-    <div id="chatbot-messages" class="flex-1 p-3 overflow-y-auto text-sm space-y-2">
-      <div class="bg-gray-200 p-2 rounded-lg w-fit max-w-[80%]">
-        👋 Hi! I’m your assistant. Ask me about Websites or AI Agents.
-      </div>
-    </div>
+<script>
+  const bubble = document.getElementById("chatbot-toggle");
+  bubble.addEventListener("click", () => {
+    $crisp.push(["do", "chat:open"]); // Open Crisp chatbox
+  });
+</script>
 
-    <div class="p-3 border-t flex">
-      <input id="chatbot-input" 
-             type="text" 
-             placeholder="Type a message..." 
-             class="flex-1 border rounded-lg px-2 py-1 text-sm focus:outline-none text-black">
-      <button id="chatbot-send" 
-              class="ml-2 bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 text-sm">
-        Send
-      </button>
-    </div>
-  </div>
-
-  <script>
-    const toggleBtn = document.getElementById("chatbot-toggle");
-    const chatWindow = document.getElementById("chatbot-window");
-    const closeBtn = document.getElementById("chatbot-close");
-    const sendBtn = document.getElementById("chatbot-send");
-    const inputField = document.getElementById("chatbot-input");
-    const messagesDiv = document.getElementById("chatbot-messages");
-
-    toggleBtn.addEventListener("click", () => chatWindow.classList.toggle("hidden"));
-    closeBtn.addEventListener("click", () => chatWindow.classList.add("hidden"));
-
-    sendBtn.addEventListener("click", sendMessage);
-    inputField.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") sendMessage();
-    });
-
-    async function sendMessage() {
-      const msg = inputField.value.trim();
-      if (!msg) return;
-
-      addMessage(msg, "user");
-      inputField.value = "";
-
-      try {
-        const response = await fetch("/api/chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: msg }),
-        });
-
-        const data = await response.json();
-        addMessage(data.reply, "bot");
-      } catch (error) {
-        addMessage("⚠️ Error: Could not reach AI server.", "bot");
-      }
-    }
-
-    function addMessage(text, sender) {
-      const bubble = document.createElement("div");
-      bubble.className = `p-2 rounded-lg max-w-[80%] ${
-        sender === "user"
-          ? "bg-blue-600 text-white self-end ml-auto"
-          : "bg-gray-200 text-black"
-      }`;
-      bubble.textContent = text;
-      messagesDiv.appendChild(bubble);
-      messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    }
-  </script>
 
 </body>
 </html>
+
