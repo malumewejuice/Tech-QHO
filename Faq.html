@@ -74,6 +74,21 @@
 
     </ul>
   </div>
+
+  <script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+
+    // Animate burger icon
+    toggle.children[0].classList.toggle("rotate-45");
+    toggle.children[1].classList.toggle("opacity-0");
+    toggle.children[2].classList.toggle("-rotate-45");
+  });
+</script>
+
 </nav>
 
 
@@ -264,5 +279,6 @@
   </script>
 </body>
 </html>
+
 
 
