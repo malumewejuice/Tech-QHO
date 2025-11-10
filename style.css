@@ -495,10 +495,73 @@ h1, h2, h3, h4, h5, h6 {
       pointer-events: auto;
     }
     
-    @media (max-width: 768px) {
-      .chat-window {
-        right: 1rem;
-      }
-    }
+  /* ===========================================
+   MOBILE FIXES FOR TECHQHO.CO.ZA
+   =========================================== */
 
-    
+@media (max-width: 768px) {
+
+  /* Root container */
+  #root {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  /* Make all images responsive */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 2rem 1rem;
+  }
+
+  /* Fix grid layout collapsing */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix pricing cards wrapping */
+  .pricing-card {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Navbar tweaks */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links li a {
+    padding: 10px 0;
+  }
+
+  /* Fix large logo */
+  .logo {
+    height: 3.5em;
+    padding: 0.5em;
+  }
+
+  /* Chat bubble smaller */
+  .chat-bubble {
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  /* Chat window better fit */
+  .chat-window {
+    width: 90%;
+    right: 5%;
+  }
+
+  /* Footer grid mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
