@@ -565,3 +565,106 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
+
+
+/* =========================================================
+   ANIMATED BURGER MENU (MOBILE ONLY)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* Hide desktop layout */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111827;
+    margin-top: 15px;
+    padding: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: slideDown 0.35s ease forwards;
+  }
+
+  /* Slide down animation */
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SHOW MENU when toggle is checked */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* =============================
+     Hamburger Icon (animated)
+     ============================= */
+  .menu-icon {
+    width: 34px;
+    height: 26px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .menu-icon .bar {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    transition: 0.4s ease;
+  }
+
+  .menu-icon .bar:nth-child(1) {
+    top: 0;
+  }
+  .menu-icon .bar:nth-child(2) {
+    top: 11px;
+  }
+  .menu-icon .bar:nth-child(3) {
+    top: 22px;
+  }
+
+  /* Animate to "X" */
+  #menu-toggle:checked + .menu-icon .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 11px;
+  }
+
+  #menu-toggle:checked + .menu-icon .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 11px;
+  }
+
+  /* Mobile nav link styles */
+  .nav-links li {
+    padding: 10px 20px;
+    text-align: left;
+  }
+
+  .nav-links li a {
+    padding: 10px 0;
+    color: #c7d2fe;
+    display: block;
+    font-size: 17px;
+  }
+
+  .nav-links li ul {
+    position: static;
+    background: none;
+    padding-left: 20px;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
