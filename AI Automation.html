@@ -9,9 +9,11 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen bg-gray-50 text-gray-800">
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
 
- <!-- Navigation -->
+
+  <!-- Navigation -->
+<!-- Navigation -->
 <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 border-b border-gray-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
 
@@ -70,9 +72,22 @@
 
     </ul>
   </div>
+
+  <script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+
+    // Animate burger icon
+    toggle.children[0].classList.toggle("rotate-45");
+    toggle.children[1].classList.toggle("opacity-0");
+    toggle.children[2].classList.toggle("-rotate-45");
+  });
+</script>
+
 </nav>
-
-
 
   <main class="pt-24">
 
@@ -236,6 +251,7 @@
   </script>
 </body>
 </html>
+
 
 
 
